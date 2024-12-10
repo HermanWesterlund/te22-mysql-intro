@@ -1,0 +1,15 @@
+<form action="/birds" method="POST">
+  <label for="name">Namn</label>
+  <input type="text" name="name" id="name">
+  <label for="name">Beskrivning</label>
+  <input type="text" name="description" id="description">
+  <label for="wingspan">Vingspann</label>
+  <input type="number" name="wingspan" id="wingspan">
+  <label for="species_id">Art</label>
+  <select name="species_id" id="species_id">
+    {% for species in specie %}
+    <option value={{species.id}}>{{ species.name }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Submit</button>
+</form>

@@ -1,10 +1,9 @@
 {% block header %}
 <h1>{{ title }}</h1>
+<h3>Lista av fåglar:</h3>
 {% for birds in bird %}
     <p>---------------------------</p>
     <p><b>Namn:</b> <a href= "/birds/{{ birds.id }}">{{ birds.name }}</a></p>
     <p><b>Art:</b> {{ birds.species }}</p>
-    <p><b>Vingspann:</b> {{ birds.wingspan }}</p>
-    <p>---------------------------</p>
 {% endfor %}
 {% endblock %}

@@ -1,0 +1,9 @@
+{% block header %}
+<h1>{{ title }}</h1>
+<h3>Lista av arter:</h3>
+{% for species in specie %}
+    <p>---------------------------</p>
+    <p><b>Art:</b> {{ species.name}}</p>
+    <p>---------------------------</p>
+{% endfor %}
+{% endblock %}
